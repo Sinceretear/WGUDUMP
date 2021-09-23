@@ -56,3 +56,17 @@ INSERT INTO COFFEE
 VALUES (1, 1001, 2, 'dark coffee', 4.21),
 (2, 1001, 3, 'armenian coffee', 3.11),
 (3, 3001, 3, 'sweet folgers coffee', 1.81);
+
+CREATE VIEW EmployeeView AS
+SELECT CONCAT(EMPLOYEE.first_name, " ", EMPLOYEE.last_name) AS employee_full_name
+FROM EMPLOYEE;
+
+CREATE INDEX idx_coffey_name
+ON COFFEE (coffee_name);
+
+SELECT * 
+FROM EmployeeView;
+
+SELECT * 
+FROM SUPPLIER
+WHERE SUPPLIER.country = 'japan';
