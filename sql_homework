@@ -36,3 +36,23 @@ CREATE TABLE COFFEE (
     FOREIGN KEY (shop_id) REFERENCES COFFEE_SHOP(shop_id),
     FOREIGN KEY (supplier_id) REFERENCES supplier(supplier_id)
 );
+
+INSERT INTO COFFEE_SHOP 
+VALUES (1001, 'starbux', 'Nashville', 'TN'),
+(2001, 'petes', 'Fresno', 'CA'),
+(3001, 'dunkin', 'Dallas', 'TX');
+
+INSERT INTO EMPLOYEE
+VALUES (1, 1001, 'amber', 'smith', '2019-08-29', 'doctor'),
+(2, 2001, 'chris', 'davis', '2020-04-11', 'nurse'),
+(3, 2001, 'luke', 'beacher', '2021-10-17', 'accountant');
+
+INSERT INTO SUPPLIER
+VALUES (1, 'East supply', 'mexico', 'mark', 'm@gmail.com'),
+(2, 'West supply', 'canada', 'amy', 'amy@gmail.com'),
+(3, 'Northern supply', 'japan', 'ben', 'ben10@gmail.com');
+
+INSERT INTO COFFEE
+VALUES (1, 1001, 2, 'dark coffee', 4.21),
+(2, 1001, 3, 'armenian coffee', 3.11),
+(3, 3001, 3, 'sweet folgers coffee', 1.81);
