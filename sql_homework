@@ -70,3 +70,8 @@ FROM EmployeeView;
 SELECT * 
 FROM SUPPLIER
 WHERE SUPPLIER.country = 'japan';
+
+SELECT EMPLOYEE.first_name, EMPLOYEE.last_name, COFFEE_SHOP.shop_name, COFFEE_SHOP.city, COFFEE_SHOP.state
+FROM COFFEE_SHOP
+JOIN EMPLOYEE ON COFFEE_SHOP.shop_id = EMPLOYEE.shop_id
+inner JOIN COFFEE ON COFFEE.shop_id = COFFEE_SHOP.shop_id;
